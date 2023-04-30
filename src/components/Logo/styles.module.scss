@@ -1,0 +1,19 @@
+@import "/src/styles/variables.scss";
+
+.heading {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 700;
+  color: $primary;
+}
+
+.subHeading {
+  margin-top: -10px;
+  color: $primary-dark;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}

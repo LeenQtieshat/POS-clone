@@ -1,0 +1,136 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
+
+.headingContainer {
+  @include flex-center;
+  width: 50%;
+  background-color: $white;
+  padding: 0 5px;
+
+  .confirmationOptions {
+    @include flex-column;
+    max-width: 408px;
+    width: 100%;
+
+    .confirmMsgContainer {
+      @include flex-column;
+      align-items: center;
+      height: auto;
+      margin-bottom: 48px;
+
+      svg {
+        color: $success;
+        font-size: $fs-enormous;
+        margin-bottom: 22px;
+      }
+
+      .confirmMsg {
+        font-size: $fs-xlarge;
+        font-weight: 500;
+      }
+    }
+
+    .receiptOptions {
+      @include flex-row-between;
+      width: 100%;
+      max-width: 408px;
+      .printReceiptButton,
+      .emailButton,
+      .emailSent {
+        @include flex-center;
+        max-width: 192px;
+        width: 50%;
+        height: 72px;
+        font-size: $fs-medium;
+        font-weight: 700;
+        border: 1px solid $gray300;
+        border-radius: 4px;
+        background-color: transparent;
+        padding: 8px 24px 8px 24px;
+        color: $primary;
+        text-transform: none;
+        margin: 0 0 0 5px;
+      }
+      .emailSent {
+        border: none;
+        color: $gray500;
+      }
+    }
+
+    .backToHomeButton {
+      @include flex-center;
+      max-width: 408px;
+      width: 100%;
+      padding: 8px 24px;
+      height: 72px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: none;
+      margin-top: 24px;
+    }
+  }
+
+  @include screen-device(800px) {
+    .confirmationOptions {
+      padding: 15px;
+      .confirmMsgContainer {
+        svg {
+          font-size: $fs-xxlarge;
+        }
+        .confirmMsg {
+          font-size: $fs-medium;
+          text-align: center;
+        }
+      }
+
+      .receiptOptions {
+        .printReceiptButton,
+        .emailButton {
+          width: 48%;
+        }
+      }
+    }
+  }
+}
+.receiptContainer {
+  background-color: $gray100;
+  width: 50%;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@include screen-device(tablet) {
+  .headingContainer {
+    @include flex-center;
+    width: 40%;
+    .confirmationOptions {
+      .receiptOptions {
+        justify-content: flex-start;
+        .printReceiptButton,
+        .emailButton {
+          padding: 8px;
+          &:nth-child(2) {
+            margin-left: 8px;
+          }
+
+          font-size: $fs-base;
+        }
+      }
+    }
+  }
+  .receiptContainer {
+    width: 60%;
+  }
+}
+
+@include screen-device(800px) {
+  .headingContainer {
+    @include flex-center;
+    width: 100%;
+  }
+  .receiptContainer {
+    width: 100%;
+  }
+}

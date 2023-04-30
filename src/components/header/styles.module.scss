@@ -1,0 +1,15 @@
+@import "/src/styles/variables.scss";
+
+.headerContainer {
+  padding: 0px 30px;
+  background-color: $white;
+  border-bottom: 1px solid $gray300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageName {
+  font-size: 20px;
+  font-weight: 500;
+}

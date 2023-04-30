@@ -1,0 +1,29 @@
+.scaleUpDownEnter {
+  div {
+    opacity: 0;
+    // transform: scale(1.05) translate(-50%, -50%);
+  }
+}
+
+.scaleUpDownEnterActive {
+  div {
+    opacity: 1;
+    // transform: scale(1) translate(-50%, -50%);
+    transition: all 0.3s ease-in-out !important;
+  }
+}
+
+.scaleUpDownExit {
+  div {
+    opacity: 1;
+    // transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+.scaleUpDownExitActive {
+  div {
+    opacity: 0;
+    // transform: scale(1.02) translate(-50%, -50%);
+    transition: all 0.2s ease-in-out !important;
+  }
+}

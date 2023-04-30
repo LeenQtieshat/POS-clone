@@ -1,0 +1,8 @@
+@import "/src/styles/variables.scss";
+
+.commonBox {
+  background-color: $white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 20px rgba($gray400, 0.2);
+}

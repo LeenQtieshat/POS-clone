@@ -1,0 +1,46 @@
+@import "/src/styles/variables.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  .containerHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    .title {
+      font-size: $fs-medium;
+      font-weight: 500;
+    }
+    .editBtn {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 12px;
+      gap: 8px;
+      width: 74px;
+      height: 32px;
+      border: 1px solid $gray300;
+      border-radius: 4px;
+    }
+    .icon {
+      color: $primary !important;
+    }
+  }
+  .body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

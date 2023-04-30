@@ -1,0 +1,56 @@
+@import "../../../styles/variables";
+
+.selectContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectButton {
+  all: unset;
+  background-color: $gray100;
+  padding: 10px 30px;
+  border-radius: 15px;
+  text-transform: capitalize;
+  color: $primary;
+  min-width: 115px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.selectButtonText {
+  margin-right: 10px;
+}
+
+.selectButtonOpened {
+  svg {
+    transform: rotateZ(-180deg);
+  }
+}
+
+.selectFieldError {
+  color: $danger;
+  position: absolute;
+  left: 10px;
+  bottom: -25px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.selectLabel {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: $primary-dark;
+}
+
+.hasError {
+  button {
+    border-color: $danger !important;
+    background-color: rgba($danger, 0.1) !important;
+  }
+}

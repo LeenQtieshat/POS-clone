@@ -1,0 +1,54 @@
+@import "/src/styles/variables.scss";
+
+.inputContainer {
+  display: flex;
+}
+
+.counter {
+  display: flex;
+}
+
+.counterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  padding: 10px 12px;
+  border: 1px solid $gray300;
+  margin: 0 10px;
+  border-radius: 2px;
+}
+
+.counterValues {
+  border: 0;
+  text-align: center;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.controlButton {
+  background: none;
+  border: none;
+  border: 1px solid $gray300;
+  color: $primary;
+  border-radius: 2px;
+  display: block;
+  padding: 10px 13px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-color: $primary;
+  }
+}

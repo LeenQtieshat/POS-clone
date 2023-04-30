@@ -1,0 +1,16 @@
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .ticketQuantity {
+    width: 5%;
+  }
+  .ticketName {
+    width: 60%;
+  }
+  .ticketPrice {
+    width: 30%;
+    text-align: right;
+  }
+}

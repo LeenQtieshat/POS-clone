@@ -1,0 +1,98 @@
+@import "/src/styles/variables.scss";
+
+.button {
+  border: 0;
+  padding: 15px 20px;
+  border-radius: 4px;
+  margin: 10px 0;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  gap: 10px;
+  text-transform: capitalize;
+  display: flex;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.buttonPrimary {
+  background-color: $primary;
+  color: $white;
+  &:hover {
+    background-color: $primary-dark;
+  }
+
+  &:disabled {
+    background-color: $gray200;
+    color: $gray400;
+  }
+}
+.buttonWhite {
+  background-color: $white;
+  border-color: $gray300;
+  color: $primary;
+  &:hover {
+    background-color: $gray100;
+    border-color: transparent;
+  }
+
+  &:disabled {
+    border-color: $gray300;
+    color: $gray400;
+    background-color: $gray200;
+  }
+}
+
+.buttonGrey {
+  background-color: $gray300;
+  color: $dark;
+  &:hover {
+    background-color: darken($gray300, 3);
+  }
+}
+
+.buttonDanger {
+  background-color: $danger;
+  color: $white;
+  &:hover {
+    background-color: darken($danger, 5);
+  }
+}
+
+.buttonTextPrimary,
+.buttonTextGrey,
+.buttonTextDanger,
+.buttonTextWarning,
+.buttonTextDark {
+  background-color: $gray100;
+  &:hover {
+    background-color: darken($gray100, 6);
+  }
+}
+
+.buttonTextPrimary {
+  color: $primary;
+}
+.buttonTextGrey {
+  color: $gray300;
+}
+.buttonTextDanger {
+  color: $danger;
+}
+
+.buttonTextDark {
+  color: $dark;
+}
+
+.buttonText {
+  margin-left: 10px;
+}

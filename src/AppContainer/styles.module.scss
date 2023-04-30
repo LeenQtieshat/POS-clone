@@ -1,0 +1,24 @@
+@import "/src/styles/variables.scss";
+
+.appContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebarContainer {
+  width: 22%;
+}
+
+.appContent {
+  width: 78%;
+}
+
+.appContentWithoutSidebar {
+  width: 100%;
+}
+.mainContent {
+  padding: 20px;
+  height: 100vh;
+  position: relative;
+  background-color: $gray100;
+}

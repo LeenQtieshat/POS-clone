@@ -1,0 +1,35 @@
+@import "/src/styles/variables.scss";
+
+.LoginFormCard {
+  width: 400px;
+  background-color: $white;
+  border: 1px solid $gray300;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loginButton {
+  width: 100%;
+  justify-content: center;
+}
+
+.loginField {
+  margin: 30px 0;
+}
+
+.invalidLoginMessage {
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+  color: $danger;
+  font-size: $fs-small;
+  margin-top: 25px;
+}
+
+.cardTitle {
+  font-size: $fs-xlarge;
+  margin: 0;
+}

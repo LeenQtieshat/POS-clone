@@ -1,0 +1,9 @@
+@import "/src/styles/variables";
+
+.sharedDropdownDivider {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  border-top: 1px solid $gray100;
+}

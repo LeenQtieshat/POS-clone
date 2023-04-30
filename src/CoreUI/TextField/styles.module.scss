@@ -1,0 +1,47 @@
+@import "/src/styles/variables.scss";
+
+.textField {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.textFieldInput {
+  border: 1px solid $gray300;
+  background-color: $white;
+  border-radius: 4px;
+  padding: 13px 20px;
+  transition: all 0.1s ease-in-out;
+  position: relative;
+  z-index: 99;
+  resize: none;
+
+  &::placeholder {
+    color: $gray400;
+    text-transform: capitalize;
+  }
+
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: 0;
+    border-color: $primary;
+  }
+}
+
+.requiredStar {
+  color: $danger;
+}
+
+.passwordEye {
+  position: absolute;
+  right: 10px;
+  top: 55%;
+  z-index: 99;
+  cursor: pointer;
+
+  svg {
+    color: $dark;
+    height: 18px;
+  }
+}

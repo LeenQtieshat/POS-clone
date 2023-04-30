@@ -1,0 +1,52 @@
+@import "/src/styles/variables.scss";
+
+.searchContainer {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.eventsListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-bottom: 130px;
+
+  // hide the scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.eventCardContainer {
+  width: 32%;
+}
+
+.responseHint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $gray300;
+}
+
+.searchInput {
+  width: 85%;
+  input {
+    height: 56px;
+    border-radius: 4px 0 0 4px;
+  }
+}
+
+.searchButton {
+  margin: 0 !important;
+  height: 56px;
+  align-items: center;
+  font-size: $fs-base;
+  border-radius: 0 4px 4px 0 !important;
+  width: 15%;
+  justify-content: center;
+  font-weight: 700;
+}

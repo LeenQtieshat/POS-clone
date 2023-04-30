@@ -1,0 +1,126 @@
+@import "/src/styles/variables.scss";
+
+.checkoutOverlayBody {
+  position: absolute;
+  top: 45%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  width: 70vw;
+  height: 75vh;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutOverlay {
+  background-color: rgba($dark, 0.4);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formBox {
+  background-color: none;
+  border-radius: none;
+  padding: 0;
+  box-shadow: none;
+  width: 624px;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.modalCloseContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: $dark;
+
+  svg {
+    margin-right: 3px;
+  }
+}
+
+.closeButton {
+  cursor: pointer;
+}
+.formAction {
+  width: 100% !important;
+  padding: 20px 0;
+  justify-content: center;
+}
+.form {
+  width: 100%;
+  padding: 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 8px;
+  gap: 4px;
+  width: 624px;
+  height: 124px;
+  background: $gray100;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  .totalAmountTitle {
+    font-size: $fs-base;
+    color: $gray500;
+  }
+  .totalAmountValue {
+    font-size: $fs-xxlarge;
+    color: $dark;
+  }
+}
+.submitBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  width: 100% !important;
+  height: 56px !important;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: $fs-base;
+  line-height: 150%;
+}
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  .button {
+    padding: 8px 24px;
+    gap: 12px;
+    width: 300px;
+    height: 56px;
+    background: $primary-light;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: $fs-medium;
+    line-height: 150%;
+  }
+  .activeBtn {
+    border: 1px solid $primary;
+  }
+}

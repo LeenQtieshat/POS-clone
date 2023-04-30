@@ -1,0 +1,86 @@
+@import "/src/styles/variables";
+@import "/src/styles/mixins";
+
+.radioContainer {
+  display: flex;
+  align-items: center;
+}
+
+.radioInput {
+  display: none;
+
+  &:checked {
+    & + label {
+      &::before {
+        border-width: 6px;
+      }
+
+      .checkboxIcon {
+        transform: translate(20%, -50%) scale(1);
+      }
+    }
+  }
+
+  &:disabled {
+    & + label {
+      cursor: default;
+      opacity: 0.5;
+      &::before {
+        opacity: 0.5;
+        cursor: default;
+      }
+      &:hover {
+        &::before {
+          border-width: 1px;
+        }
+      }
+    }
+  }
+}
+
+.radioLabel {
+  position: relative;
+  padding-left: 25px;
+  text-transform: capitalize;
+  cursor: pointer;
+  &::before {
+    content: "";
+    transition: all 0.1s ease-in-out;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $primary;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  &:hover {
+    &::before {
+      border-width: 3px;
+    }
+  }
+}
+
+.radioIcon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(20%, -50%) scale(0);
+  transition: all 0.1s ease-in-out;
+  transition-delay: 0.05s;
+  width: 14px;
+  height: 14px;
+  @include flex-center();
+
+  svg {
+    width: 14px;
+    height: 14px;
+    path {
+      fill: $white;
+    }
+  }
+}

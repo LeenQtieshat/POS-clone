@@ -1,0 +1,66 @@
+@import "/src/styles/variables.scss";
+
+.toggleContainer {
+  display: flex;
+  margin: 10px;
+}
+
+.toggleLabelContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggleInput {
+  display: none;
+
+  &:checked + label {
+    .toggleThumb {
+      left: unset;
+      right: 0;
+      transform: translate(30%, -50%);
+    }
+
+    .toggleSlider {
+      background-color: $primary;
+    }
+  }
+
+  &:disabled + label {
+    cursor: default;
+    .toggleSlider {
+      opacity: 0.3;
+    }
+  }
+}
+
+.toggleLabel {
+  text-transform: capitalize;
+}
+
+.toggleSlider {
+  height: 25px;
+  width: 45px;
+  border-radius: 15px;
+  background-color: darken($gray100, 2);
+  display: block;
+  position: relative;
+  margin: 10px;
+  transition: all 0.1s ease-in-out;
+}
+
+.toggleThumb {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-30%, -50%);
+  background-color: $white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba($gray400, 0.5);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid $gray100;
+}

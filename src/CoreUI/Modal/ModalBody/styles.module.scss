@@ -1,0 +1,10 @@
+@import "../../../../styles/variables.scss";
+
+.modalBody {
+  font-weight: 300;
+  flex-grow: 1;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: $primary-dark;
+  border-bottom: 1px solid rgba($gray400, 0.5);
+}

@@ -1,0 +1,24 @@
+@import "../../../../../styles/variables.scss";
+@import "../../../../../styles/mixins.scss";
+
+.pageNumber {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $gray100;
+  color: $dark;
+  width: 28px;
+  height: 28px;
+  @include flex-center();
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    border-color: $primary;
+  }
+}
+
+.activePage {
+  background-color: $primary;
+  color: $white;
+}

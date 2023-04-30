@@ -1,0 +1,64 @@
+@import "/src/styles/variables.scss";
+
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  height: 100%;
+  box-shadow: 4px 4px 8px rgba($gray300, 0.1);
+  padding-top: 10px;
+  position: relative;
+  border-left: 1px solid $gray300;
+  justify-content: space-between;
+  position: relative;
+  z-index: 999;
+}
+
+.ticketsHeading {
+  text-align: center;
+  font-size: $fs-large;
+  font-weight: 500;
+}
+.line {
+  min-height: 2px;
+  max-height: 2px;
+  background: $gray200;
+}
+.ticketsEmpty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  p {
+    font-size: $fs-small;
+    color: $gray400;
+  }
+
+  path {
+    fill: $gray300;
+  }
+}
+.ticketsWrapper {
+  justify-self: flex-start;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow-y: scroll;
+  padding: 0 30px;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.ticketsCharge {
+  padding: 10px;
+  border-top: 1px solid $gray300;
+  button {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,17 @@
+.slideUpDownEnter {
+  transform: translateY(-40px);
+}
+
+.slideUpDownEnterActive {
+  transition: all 0.2s ease-in-out;
+  transform: translateY(0);
+}
+
+.slideUpDownExit {
+  transform: translateY(0);
+}
+
+.slideUpDownExitActive {
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-40px);
+}

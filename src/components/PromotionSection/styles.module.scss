@@ -1,0 +1,71 @@
+@import "/src/styles/variables.scss";
+
+
+.PromoCode,
+.selectedDiscountWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.promotionForm,
+.selectedDiscountWrapper {
+  margin-top: auto;
+  display: flex;
+  margin-bottom: 5px;
+}
+.codeInput{
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  height: 46px;
+  width: 250px
+}
+
+.errorMsg {
+  left: auto !important;
+  right: 0 !important;
+  bottom: -3px !important;
+}
+
+.selectedDiscount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white;
+  border: 1px solid $gray300;
+  border-radius: 4px;
+  padding: 5px 15px;
+  min-width: 300px;
+  margin-bottom: 5px;
+
+  .infoWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .coupon {
+      font-size: $fs-large;
+      color: $primary;
+    }
+
+    .discountAmount {
+      font-size: $fs-small;
+      color: $gray500;
+    }
+  }
+
+  .removeBtn {
+    color: $danger;
+    cursor: pointer;
+  }
+}
+
+.promoAction {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4px 4px 0;
+}

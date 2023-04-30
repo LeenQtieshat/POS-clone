@@ -1,0 +1,17 @@
+.commonTableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+
+.commonTableTitle {
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: 400;
+}
+
+.commonTableAddButton {
+  text-transform: capitalize;
+}

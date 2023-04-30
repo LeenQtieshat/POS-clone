@@ -1,0 +1,13 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
+
+.confirmOrderContainer {
+  height: calc(100vh - 88px);
+  display: flex;
+}
+
+@include screen-device(800px) {
+  .confirmOrderContainer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,26 @@
+@import "/src/styles/variables";
+
+.dropdownItem {
+  cursor: pointer;
+  padding: 15px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  text-decoration: none;
+  color: $primary-dark;
+
+  &:hover {
+    background-color: rgba($primary, 0.1);
+  }
+}
+
+.dropdownItemText {
+  margin-inline-start: 10px;
+}
+
+.dropdownItemCheckbox {
+  label {
+    padding-left: 35px;
+  }
+}

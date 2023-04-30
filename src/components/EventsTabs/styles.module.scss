@@ -1,0 +1,31 @@
+@import "/src/styles/variables.scss";
+
+.eventTabsContainer {
+  margin: 30px 0;
+}
+
+.eventTabsList {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.eventTabOption {
+  font-weight: 400;
+  font-size: $fs-base;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+  &.active {
+    border-color: $primary;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  &:hover {
+    border-color: $primary;
+    color: $primary;
+  }
+}

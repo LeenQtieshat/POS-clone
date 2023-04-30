@@ -1,0 +1,108 @@
+@import "/src/styles/variables.scss";
+
+.eventTicketsModal {
+  position: absolute;
+  top: 45%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  width: 70vw;
+  height: 75vh;
+  z-index: 9999;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventTicketsOverlay {
+  background-color: rgba($dark, 0.4);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(5px);
+}
+
+.modalCloseContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: $dark;
+
+  svg {
+    margin-right: 3px;
+  }
+}
+
+.closeButton {
+  cursor: pointer;
+}
+
+.eventTitle {
+  font-size: $fs-xlarge;
+  width: 50%;
+  padding-left: 10px;
+}
+
+.ticketColumns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.ticketColumn {
+  color: $gray500;
+  padding: 10px;
+  flex: 1;
+
+  &:last-of-type {
+    padding-left: 30px;
+  }
+}
+
+.ticketsFooter {
+  display: flex;
+  width: calc(100% + 40px);
+  border-top: 1px solid $gray200;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -20px;
+  margin-bottom: -20px;
+  padding: 10px 20px;
+}
+
+.ticketsFooterActions {
+  display: flex;
+  gap: 10px;
+}
+
+.ticketsFooterTotal {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ticketsAction {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:first-of-type {
+    color: $dark;
+  }
+}
+
+.noTickets {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: $fs-medium;
+  font-weight: 300;
+  color: $gray400;
+}

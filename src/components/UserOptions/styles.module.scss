@@ -1,0 +1,20 @@
+@import "/src/styles/variables.scss";
+
+.userOptionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.initials {
+  font-size: $fs-base;
+  text-transform: capitalize;
+  color: $dark;
+}
+
+.optionsDropdown {
+  width: 200px;
+  transform: translate(-50%, 10%);
+}

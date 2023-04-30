@@ -1,0 +1,9 @@
+@import "../../../../styles/variables.scss";
+
+.tableHeader {
+  border-bottom: 1px solid rgba($gray400, 0.4);
+}
+.tableCell {
+  padding: 20px;
+  text-transform: capitalize;
+}

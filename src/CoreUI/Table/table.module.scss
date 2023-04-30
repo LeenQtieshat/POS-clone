@@ -1,0 +1,35 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.commonTable {
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  margin-top: -20px;
+}
+
+.rowButton {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  width: 28px;
+  margin: 0;
+  height: 28px;
+  @include flex-center();
+  background-color: transparent !important;
+
+  &:hover {
+    background-color: $gray100 !important;
+  }
+}
+
+.checkboxCell {
+  justify-content: flex-start !important;
+}
+
+.activeStatus {
+  color: $success;
+}
+
+.inactiveStatus {
+  color: $danger;
+}

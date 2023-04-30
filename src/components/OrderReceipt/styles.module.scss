@@ -1,0 +1,76 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/mixins.scss';
+
+.receiptDetails {
+  background-color: $white;
+  margin: 64px auto;
+  max-width: 409px;
+  width: 90%;
+  background: $white;
+  border: 1px solid $gray200;
+  border-radius: 4px;
+  color: $dark;
+  .eventTitle {
+    font-weight: 500;
+    font-size: $fs-small;
+  }
+  .rowLayout {
+    display: flex;
+    justify-content: space-between;
+  }
+  .paymentSummaryRowLayout {
+    margin: 8px 0;
+  }
+  .row {
+    padding: 24px;
+    position: relative;
+    .shortLengthBorder,
+    .shortThickBorder {
+      border-bottom: 1px solid $gray200;
+      position: absolute;
+      bottom: 0px;
+      width: 90%;
+      margin: auto;
+    }
+    .shortThickBorder {
+      border-bottom: 6px solid $gray200;
+    }
+    .rowTitle {
+      font-size: $fs-small;
+      font-weight: 400;
+
+      svg {
+        font-size: $fs-tiny;
+        font-weight: 400;
+      }
+    }
+    .ticketTitle {
+      @include flex-row-between;
+      margin-top: 16px;
+    }
+    .rowValue {
+      font-weight: 400;
+      font-size: $fs-small;
+    }
+  }
+  .paymentSummary {
+    color: $gray500;
+    text-transform: capitalize;
+
+    .totalPrice {
+      color: $dark;
+      font-weight: 700;
+    }
+    font-weight: 700;
+  }
+
+  .customerName {
+    font-weight: 700;
+    font-size: $fs-base;
+    text-transform: capitalize;
+    color: $dark;
+  }
+  .agentLocation {
+    margin-top: 8px;
+  }
+}

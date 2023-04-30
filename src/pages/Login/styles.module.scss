@@ -1,0 +1,10 @@
+@import "/src/styles/variables.scss";
+
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $gray100;
+  flex-direction: column;
+}

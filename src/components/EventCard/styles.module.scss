@@ -1,0 +1,83 @@
+@import "/src/styles/variables.scss";
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border: 1px solid $gray300;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 30%;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.info {
+  padding: 10px;
+}
+
+.infoHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titleContainer {
+  margin: 0;
+  font-weight: 700;
+  font-size: $fs-base;
+  margin-bottom: 10px;
+  color: $dark;
+  line-height: 24px;
+}
+
+.timeContainer,
+.locationContainer {
+  font-size: $fs-small;
+  color: $dark;
+  max-height: 150px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.locationContainer {
+  color: $gray500;
+}
+
+.datePlaceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.eventPrice {
+  font-weight: 700;
+  font-size: $fs-base;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.saleTag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $danger;
+  color: $white;
+}

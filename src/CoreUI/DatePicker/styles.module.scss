@@ -1,0 +1,74 @@
+@import "/src/styles/variables.scss";
+
+.datePickerContainer {
+  z-index: 999;
+  position: relative;
+}
+
+.datePickerInput {
+  background-color: $gray100;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 11px;
+  color: $primary;
+  text-transform: capitalize;
+  width: 100%;
+
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: 0;
+    border-color: $primary;
+    background-color: darken($gray100, 1);
+  }
+}
+
+.datePickerCalendar {
+  z-index: 999;
+  animation: slide-calendar-down 0.2s ease-in-out;
+  background-color: $white;
+  border-color: $gray100;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 10px 10px 20px rgba($gray400, 0.2);
+}
+
+.datePickerMonth {
+  color: $white;
+}
+
+.datePickerLabel {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: $primary-dark;
+}
+
+@keyframes slide-calendar-down {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.dateFieldError {
+  color: $danger;
+  position: absolute;
+  left: 10px;
+  bottom: -25px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.hasError {
+  input {
+    border-color: $danger !important;
+    background-color: rgba($danger, 0.1) !important;
+  }
+}
